@@ -10,6 +10,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+                // ✅ Add this line — fixes AsyncStorage error
+        maven { url "https://www.jitpack.io" }
+
     }
     dependencies {
         classpath("com.android.tools.build:gradle")

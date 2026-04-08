@@ -4,3 +4,13 @@ extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autoli
 rootProject.name = 'Demo1'
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')
+
+// ✅ Add this block at bottom — fixes AsyncStorage error
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }  // ← this line fixes the error
+    }
+}
