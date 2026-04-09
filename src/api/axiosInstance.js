@@ -4,7 +4,7 @@ import axios from 'axios';
 import { getToken } from '../utils/asyncStorage';
 
 const axiosInstance = axios.create({
-  // ✅ Android Emulator
+  // ✅ Android Emulato
   baseURL: 'http://192.168.56.1:3000',
 
   // ✅ iOS Simulator
